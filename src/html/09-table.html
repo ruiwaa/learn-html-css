@@ -4,47 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>테이블 관련 요소 | Likelion Bootcamp</title>
+    <style>
+      .html-css {
+        width: 100px;
+        background-color: aquamarine;
+      }
+      table,th,td{border: 1px solid currentColor;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+    </style>
   </head>
   <body>
     <a href="/index.html">Index로 이동</a>
     <hr />
     <h1>테이블 관련 요소</h1>
-    <table border="1">
+    <!-- id, header 속성 사용 예시 -->
+    <table class="lecture-table">
+      <caption class="sr-only">
+        입문자를 위한 Git과 HTML&amp;CSS 과정
+        <span>학습시간, 난이도, 교육비 지원, 평가항목, 수료기준, 정원, 교재 정보 등을 나타낸 표</span>
+      </caption>
+      <span class="sr-only">학습시간, 난이도, 교육비 지원, 평가항목, 수료기준, 정원, 교재 정보 등을 나타낸 표</span>
+      </caption>
+      <colgroup>
+        <col span="2" />
+        <col span="2" />
+      </colgroup>
+      <tr>
+        <th scope="row">학습시간</th>
+        <td>09:00!17:00(28시간)</td>
+        <th scope="row">난이도</th>
+        <td>초급</td>
+      </tr>
+      <tr>
+        <th scope="row">교육비 지원</th>
+        <td>고용보험 비환급</td>
+        <th scope="row">평가항목</th>
+        <td>출석률 100%</td>
+      </tr>
+      <tr>
+        <th scope="row">수료기준</th>
+        <td>총점 80점 이상시 수료</td>
+        <th scope="row">정원</th>
+        <td>24명</td>
+      </tr>
+      <tr>
+        <th scope="row">교재정보</th>
+        <td colspan="3">
+          <p>입문자를 위한 Git과 HTML&amp;CSS</p>
+          <p>HTML&amp;CSS 웹사이트 개발과 디자인 기초(35,000원</p>
+        </td>
+      </tr>
+    </table>
+    <hr />
+    <table>
       <caption>
         프론트엔드 시험 결과
       </caption>
       <colgroup>
         <col class="name" />
-        <col span="2" class="html-css" />
+        <col style="background-color: aquamarine" span="2" class="html-css" />
         <col class="js" />
       </colgroup>
-      <tr>
-        <th scope="col">이름</th>
-        <th scope="col">HTML</th>
-        <th scope="col">CSS</th>
-        <th scope="col">Javascript</th>
-      </tr>
-      <tr>
-        <td>박연하</td>
-        <td>100</td>
-        <td>90</td>
-        <td>95</td>
-      </tr>
-      <tr>
-        <td>백희연</td>
-        <td>50</td>
-        <td>90</td>
-        <td>100</td>
-      </tr>
-      <tr>
-        <td>이찬미</td>
-        <td>20</td>
-        <td>100</td>
-        <td>100</td>
-      </tr>
+      <thhead>
+        <tr>
+          <th scope="col">이름</th>
+          <th scope="col">HTML</th>
+          <th scope="col">CSS</th>
+          <th scope="col">Javascript</th>
+        </tr>
+      </thhead>
+      <tfoot>
+        <tr>
+          <th scope="row">합계</th>
+          <td colspan="3">10000</td>
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td>박연하</td>
+          <td>100</td>
+          <td>90</td>
+          <td>95</td>
+        </tr>
+        <tr>
+          <td>백희연</td>
+          <td>50</td>
+          <td>90</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>이찬미</td>
+          <td>20</td>
+          <td>100</td>
+          <td>100</td>
+        </tr>
+      </tbody>
     </table>
     <hr />
-    <table border="1">
+    <table>
       <tr>
         <th scope="row">이름</th>
         <th scope="row">HTML</th>
