@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iframe, object 요소 | Likelion Bootcamp</title>
+    <!-- 임베디드 형식의 스타일, 바디 안에 스타일 속성을 넣으면 '안라인' -->
+    <style>
+      iframe {
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/index.html">Index로 이동</a>
+    <hr />
+    <h1>iframe, object 요소</h1>
+    <h2>iframe 예시</h2>
+    <h2>object 예시</h2>
+    <!-- PDF (object 태그를 사용할 수 있다.) -->
+    <figure>
+      <object width="800" height="600" data="/src/assets/pdf/naver-coding-convention.pdf" type="application/pdf"></object>
+      <figcaption>NHN Coding Covention</figcaption>
+    </figure>
+    <!-- 이미지예시 -->
+    <!-- object는 data를 사용 -->
+    <object data="/src/assets/face/face5.jpg" type="image/jpeg"></object>
+    <hr />
+    <figure>
+      <!-- iframe은 외부 플랫폼을 가져올 수 있는 태그,마치 창과 같다. 창을 통해서 다른 html을 보고 있다. -->
+      <!-- 스크린리더는 iframe 안에 title 부분에 설명을 넣어주면 이해할 수 있다. (영상을 퍼오고 나서 꼭 접근성을 고려!)-->
+      <iframe>
+        width="560" height="315" src="https://www.youtube.com/embed/W6VSA3GDK6s?si=eYiIoVRhkpOCyPKP" title="WAI-ARIA소개" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+      </iframe>
+      <figcaption>WAI-ARIA소개</figcaption>
+      <!-- 유튜브 영상을 iframe으로 가져온 사례 -->
+    </figure>
+    <!-- 지도 -->
+    <div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d252458.85516589484!2d126.67406029453126!3d37.570990800000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca322e84399cb%3A0x104b07263c235889!2z66mL7J-B7J207IKs7J6Q7LKY65-8!5e1!3m2!1sko!2skr!4v1764221433974!5m2!1sko!2skr"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </body>
+</html>
