@@ -10,11 +10,17 @@
     <hr />
     <h1>picture와 source 요소</h1>
     <picture>
-      <source srcset="/src/assets/rwd/image-1x.png 1x, /src/assets/rwd/image-2x.png 2x, /src/assets/rwd/image-3x.png 3x" />
-      <img src="/src/assets/rwd/image-src.png" alt="" />
+      <source sizes="50vw" srcset="/src/assets/logo/netflix@1x.webp 420w, /src/assets/logo/netflix@2x.webp 656w" />
+      <img src="/src/assets/logo/netflix@1x.png" alt="NETFLIX" />
     </picture>
 
     <hr />
+    <picture>
+      <source srcset="/src/assets/rwd/image-1x.png 1x, /src/assets/rwd/image-2x.png 2x, /src/assets/rwd/image-3x.png 3x" />
+      <img src="/src/assets/rwd/image-src.png" alt="" />
+    </picture>
+    <hr />
+
     <picture>
       <!-- media 조건을 걸어두면  media에서 500px을 'viewport'라고 부른다.-->
       <source srcset="/src/assets/rwd/small-550.jpg 550w" media="(max-width: 500px)" />
