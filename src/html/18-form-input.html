@@ -28,5 +28,76 @@
         </div>
       </fieldset>
     </form>
+    <hr />
+    <!-- action은 서버의 주소, post는 전송하기라는 뜻 -->
+    <form action="https://formspree.io/f/xeqwwbwk" method="post">
+      <!-- 택스트 입력 서식 -->
+       <!-- placeholder는 입력값에 대한 '힌트'이다,레이블과 동일한 이름값으로 하면 안된다.
+        입력값을 입력하면 사라지기때문에 사용자가 불편할 수 있음,
+        레이블은 '항상'보여야 한다. 그것이 좋은 UI이다. -->
+       <div>
+        <label for="userID">이름</label>
+        <input type="text" id="userID" required placeholder="예)홍길동" name="name"/>
+       </div>
+       <!-- 비밀번호 입력 서식 -->
+        <div>
+          <label for="userPwd">비밀번호</label>
+          <input type="password" pattern="^(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$" id="userPwd" required placeholder="최소 8자리 이상" name="password"/>
+        </div>
+
+        <!-- 이메일 입력 서식 -->
+         <!-- required를 통해서 입력 서식의 문법을 검증할 수 있다. required의 정보는 필수 입력값 -->
+         <div>
+          <label for="userEmail">이메일</label>
+          <input type="email" id="userEmail" required placeholder="예)guest@likelion.net" name="email" />
+         </div>
+         <!-- 전화번호 입력서식은 모바일에서 유용하다. -->
+       <div>
+        <label for="userPhone">전화번호</label>
+        <input type="tel" pattern="[0-9]{10}" id="userPhone" placeholder="예)010-000-0000" name="phone" />
+       </div>
+       <!-- URL입력서식 -->
+        <div>
+          <label for="userSns">SNS</label>
+          <input type="url" id="userSns" placeholder="예)http://www.facebook.com" name="sns"/>
+        </div>
+        <!-- 검색어 입력 서식 -->
+         <div>
+          <label for="search">검색어</label>
+          <input type="search" id="search" placeholder="검색어 예)멋쟁이 사자처럼" name="search" />
+         </div>
+
+        <!-- 라디오 입력서식 input을 앞에 배치해준다. -->
+        <!-- name 속성을 부여하면, 같은 그룹임을 묶어준다.
+        예)gender=value(남자면 man,여자면 woman) 
+        value 값을 주지 않으면, true or false로 날라간다. -->
+         <div>
+          <input type="radio" id="male" name="gender" value="man" checked/>
+          <label for="male">남자</label>
+          <input type="radio" id="female" name="gender" value="woman" />
+          <label for="female">여자</label>
+         </div>
+         <!-- 체크박스 입력 서식 -->
+          <div>
+            <input type="checkbox" id="html" name="frontend" value="html" checked/>
+            <label for="html">HTML</label>
+            <input type="checkbox" id="css" name="frontend" value="css" />
+            <label for="css">CSS</label>
+            <input type="checkbox" id="js" name="frontend" value="js" />
+            <label for="js">Javascript</label>
+          </div>
+        <!-- 파일 첨부 서식 -->
+         <div>
+          <input type="file" value="프로필 선택" />
+         </div>
+      
+        <!-- 전송버튼 -->
+     <input type="submit" value="전송" />
+     <!-- <button type="submit">제출</button>(버튼 태그를 이용한 마크업) -->
+      <!-- 초기화 버튼 -->
+       <input type="reset" value="초기화" />
+    <!-- 일반 버튼 -->
+     <input type="button" value="click!"/>
+    </form>
   </body>
 </html>
