@@ -3,5 +3,17 @@ body {
   color: green;
 }
 .wrapper {
+  color: blue;
+}
+#coding {
+  color: blue;
+}
+body .wrapper p.note {
   color: red;
+}
+/* 겹침,제일 나중에 선언한 것을 우선으로 적용한다. */
+/* 클래스 선택자가 요소 선택자보다 파워가 세다 */
+/* 요소+클래스 선택자 결합하여 명령해서 '.note'보다 세다 */
+body p.note.like {
+  color: purple;
 }
