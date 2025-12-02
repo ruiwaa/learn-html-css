@@ -1,0 +1,44 @@
+/* positon 레이아웃 */
+/* position:relative */
+.wrapper {
+  position: relative;
+  border: 1px solid blue;
+}
+.frontend {
+  background-color: black;
+  position: relative;
+  top: -100px;
+
+  span {
+    position: relative;
+    top: -5px;
+    left: -5px;
+    background-color: #ffc;
+    display: block;
+    padding: 10px;
+  }
+}
+/* positon:absolute */
+.school {
+  span {
+    background-color: #cff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    /* width: 200px;
+    height: 100px; display 인라인 속성때문에 적용할 수 없다.*/
+  }
+}
+/* position:fixed 적용하면 block으로 처리*/
+/* position:fixed 위치는 뷰포트 기준 */
+.likelion {
+  background-color: #ffc;
+  width: 100px;
+  height: 50px;
+  font-weight: 700;
+  text-align: center;
+  align-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
