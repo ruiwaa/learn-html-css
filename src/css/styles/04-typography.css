@@ -1,0 +1,54 @@
+/* 타이포그래피 및 단위 */
+/* 글꼴 웹폰트를 사용하실 '@font-face'라고 앞에 선언해야 한다. */
+h1{
+  font-family: SUIT Variable', sans-serif;
+}
+.like {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* 굵기 */
+h1{
+  font-weight: 100;
+}
+
+/* 크기 */
+.frontend{
+  font-size: 20px;
+}
+.lion{
+  background-color: #ffc;
+  /* em-부모로부터 상속받은 값을 기준으로 적용된다 */
+  /* font-size: 1.5em; */
+  /* 클랩 함수 활용하여, 반응형 폰트 형성. clamp(), 함수,괄호 안에 인자값을 넣어주면 된다. (최소,중간값,최대) */
+  font-size: clamp(1rem,3vw,2rem);
+  /* 반응형 폰트,3vw=3%라는 뜻 */
+}
+
+.bootcamp{
+  font-size: 2rem;
+}
+
+/* 줄높이 /가급적이면 넘버 단위로 지정하는 것이 좋다.*/
+.lion{
+  line-height: 1.5;
+}
+
+/* 글꼴 스타일 */
+em{
+  font-style:italic;
+}
+
+/* 크기가 작은 대문자 */
+.lion{
+  font-variant: small-caps;
+}
+/* font 관련 속성을 단축해서 선언할 때 */
+.school{
+  background-color: #fcf;
+  font: bold italic small-caps 20px/1.5 Georgia,serif;
+}
+/* 글자 그림자 */
+h1{
+  text-shadow: 5px -5px 10px red;
+}
+
