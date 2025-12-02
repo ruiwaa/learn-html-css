@@ -1,0 +1,52 @@
+/* 박스 모델 */
+/* display 속성 */
+/* display 블록 기능 */
+.frontend {
+  font-size: 0;
+}
+.frontend span {
+  background-color: #ffc;
+  display: block;
+}
+/* display로 인라인 변경 */
+.frontend p {
+  background-color: #fcf;
+  display: inline;
+}
+.frontend div,
+.frontend p {
+  font-size: 16px;
+}
+/* border 속성 */
+.frontend {
+  border: 1px solid red;
+}
+
+/*padding 속성  */
+/* 시계방향으로 픽셀의 크기가 지정 */
+.frontend {
+  padding: 10px 20px 30px 40px;
+}
+
+/* margin 속성 */
+/* 반응형 이미지를 만들기 좋은 속성 aspect-radio 속성 */
+.frontend {
+  margin: 10px;
+}
+
+/* width &height 속성 */
+.bootcamp span:first-child {
+  width: 100px;
+  aspect-ratio: 1/1;
+}
+.bootcamp span:last-child {
+  width: 5em;
+  height: 5em;
+}
+/* overflow 속성 */
+.school {
+  background-color: #cff;
+  width: 200px;
+  height: 150px;
+  overflow: auto;
+}
