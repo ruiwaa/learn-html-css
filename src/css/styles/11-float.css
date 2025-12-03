@@ -1,0 +1,35 @@
+/* float 레이아웃 :일반 흐름에 영향을 준다 */
+/* float-left */
+/* float으로 인해 발생한 레이아웃 이슈를 overflow 속성으로 해결(정상적인 해결법은 아님) */
+.wrapper {
+  border: 5px solid red;
+  overflow: hidden;
+
+  img {
+    border: 2px solid blue;
+    float: left;
+    position: relative;
+    top: -20px;
+  }
+
+
+  .like{
+      border: 2px solid green;
+    }
+ 
+  }
+
+/* float:right */
+/* float를 지정한 요소의 부모 요소에 display 명령어를 준다 */
+.container{
+  border: 5px solid purple;
+  display: flow-root;
+
+  img{
+    border: 1px solid blue;
+    float: right;
+  }
+  .lion{
+    border: 2px solid red;
+  }
+}
