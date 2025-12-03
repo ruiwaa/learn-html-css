@@ -1,0 +1,32 @@
+/* 사용자 정의 속성 */
+@property --primary-color {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: rgb(14, 118, 97);
+}
+/* 전역 변수 */
+:root {
+  --main-color: gray;
+  --default-color: pink;
+}
+
+body {
+  color: var(--primary-color);
+}
+
+.like {
+  background: var(--base-color, var(--default-color, red));
+}
+/* 속성 값을 쓸 때 자기랑 가장 가까운 속성을 사용한다. */
+.wrapper {
+  --default-color: yellow;
+  --primary-color: red;
+  color: var(--primary-color);
+  margin-block: 20px;
+  background: var(--default-color);
+  border: 1px solid var(--main-color);
+
+  .euid {
+    color: var(--primary-color);
+  }
+}
