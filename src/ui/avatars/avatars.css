@@ -2,17 +2,16 @@
 .avatar {
   --avatar-size: 64px;
   --state-size: 20px;
-  --disable-color:#DBDBDB;
-  --active-color:#4bfe88;
-  --border-color:#fff;
-  
+  --disable-color: #dbdbdb;
+  --active-color: #4bfe88;
+  --border-color: #fff;
+
   width: var(--avatar-size);
   height: var(--avatar-size);
   position: relative;
   border: 0;
-  padding:0;
-  background-color: transparent;
-
+  padding: 0;
+  background: transparent;
 
   img {
     border-radius: 50%;
@@ -20,6 +19,9 @@
     height: 100%;
   }
 
+  /* .is-online {
+    background: var(--active-color) !important;
+  } */
 
   .avatar-state {
     width: calc(var(--state-size) / var(--avatar-size) * 100%);
@@ -30,10 +32,10 @@
     right: 0;
     bottom: 0;
     border: 2px solid var(--border-color);
-    /* box-shadow: 0px 0px 0px 2px red; */
-  }
+    /* box-shadow: 0px 0px 0px 2px var(--border-color); */
 
-  .is-online{
-  background-color: var(--active-color);
+    &.is-online {
+      background: var(--active-color);
+    }
   }
 }
