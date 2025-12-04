@@ -1,4 +1,6 @@
 /* 아바타 컴포넌트 */
+
+/* BFC : position 값이 부여될 경우 block 속성으로 변경 */
 .avatar {
   --avatar-size: 64px;
   --state-size: 20px;
@@ -36,6 +38,23 @@
 
     &.is-online {
       background: var(--active-color);
+    }
+  }
+}
+
+/* 아바타 레이아웃 */
+.avatar-list {
+  width: 596px;
+  height: 395px;
+  padding: 110px 130px;
+  box-shadow: 0 0 4px 1px currentColor;
+
+  .avatar-item {
+    float: left;
+    margin: 10px;
+
+    &:nth-child(5) {
+      clear: left;
     }
   }
 }
