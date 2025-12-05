@@ -1,0 +1,58 @@
+/* 유틸리티 바 */
+.utility-bar {
+  --spacing: 8px;
+
+  font-size: 0.875rem;
+  display: flow-root;
+  text-transform: uppercase;
+  padding: calc(var(--spacing) / 2);
+
+  li {
+    float: left;
+    display: flow-root;
+
+    span,
+    a {
+      padding: calc(var(--spacing) / 2);
+      float: inline-start;
+    }
+  }
+}
+
+/* 가상 요소를 활용한 css */
+/* 이건 자주 쓰는 방식이 아님, 가상 요소를 스크린 리더가 읽을 수 있음. */
+/* .utility-bar-before {
+  --spacing: 8px;
+
+  font-size: 0.875rem;
+  display: flow-root;
+  text-transform: uppercase;
+  padding: calc(var(--spacing) / 2);
+
+  li {
+    float: inline-start;
+  }
+
+  li:nth-child(n + 2)::before {
+    content: '|';
+  }
+
+  li:nth-child(n + 2)::before,
+  a {
+    float: inline-start;
+    padding: calc(var(--spacing) / 2);
+  }
+} */
+/* 내가 한 거 */
+/* .utility-bar {
+  font-size: 14px;
+}
+
+li {
+  margin-block: 8px;
+  float: inline-start;
+  span {
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+} */
