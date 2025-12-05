@@ -1,0 +1,74 @@
+/* 테이블 스타일링 */
+.members-wrapper {
+  background: var(yellow);
+  block-size: 500px;
+  overflow: auto;
+}
+.members {
+  inline-size: 100%;
+  border-inline: 1px solid var(--black);
+}
+
+.number {
+  inline-size: 15%;
+}
+.name {
+  inline-size: 25%;
+}
+.email {
+  inline-size: 30%;
+}
+.phone {
+  inline-size: 30%;
+}
+
+thead tr,
+tfoot tr {
+  background: var(--black);
+  color: var(--white);
+}
+
+thead tr {
+  position: sticky;
+  top: 0;
+}
+
+tr:nth-child(even) {
+  background: var(--gray);
+}
+
+th,
+td {
+  padding: 0.5em 1em;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 내가 한거 */
+/* .members-wrapper {
+  .members {
+    inline-size: 100%;
+    border: 2px solid black;
+  }
+
+  td {
+    border-bottom: 1px solid black;
+  }
+  .number {
+    inline-size: 15%;
+  }
+  .name {
+    inline-size: 25%;
+  }
+  .email {
+    inline-size: 30%;
+  }
+  .phone {
+    inline-size: 30%;
+  } */
+/* thead,
+  tfoot {
+    color: white;
+    background: black;
+  }
+} */
