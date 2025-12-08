@@ -39,6 +39,11 @@
 
 /* flex 이용한 레이아웃 */
 /* + 사용자 정의 속성을 활용한 예시 */
+.notifications {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
 .notification {
   --green: #22be61;
   --gray: #929b90;
@@ -111,6 +116,60 @@
 }
 
 /* position 또는 flex를 활용하여 div 파트 디자인(내가 스스로 해보기) */
+
+/* .notification-rice {
+  --green: #22be61;
+  --gray: #929b90;
+  --white: #fff;
+  --black: #121212;
+  --brown: #e3a368;
+  --silver: #f9fefe;
+
+  --point-color: var(--brown);
+  --text-color: var(--gray);
+  --svg-path-color: var(--white);
+  --border-color: var(--silver);
+  --spacing: 1.25rem;
+
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background: var(--white);
+  box-shadow: 0 0 2px 0 rgba(114, 119, 124, 0.8);
+
+  padding: var(--spacing);
+  color: var(--point-color);
+  position: relative;
+  display: flow-root;
+
+  svg {
+    float: left;
+  }
+
+  div {
+    width: calc(100% - 100px);
+    margin-inline: 40px;
+  }
+
+  strong {
+    font-size: 1.125rem;
+    font-weight: 600;
+    white-space: nowrap;
+    display: block;
+  }
+
+  p {
+    color: var(--gray);
+    font-size: 0.875rem;
+  }
+
+  time {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    position: absolute;
+    inset-inline-end: var(--spacing);
+    inset-block-start: var(--spacing);
+  }
+} */
 
 /* 내가 만든 코드 */
 /* .notification {
