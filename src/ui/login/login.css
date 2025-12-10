@@ -47,6 +47,10 @@
     &:user-invalid + .error-message {
       visibility: visible;
     }
+    /* 또는 이렇게 대체 가능 */
+    /* &:has(:user-invalid) .error-message {
+    visibility: visible;
+  } */
   }
 
   .error-message {
@@ -167,6 +171,7 @@
 
 /* 네이버 로그인 레이아웃 */
 
+/* 헤더 */
 .header {
   padding-block: 70px 45px;
   /* 넓이가 auto면 마진을 auto를 가질 수 없음 */
@@ -178,7 +183,6 @@
 }
 
 /* 로고 */
-/* 헤더 */
 .logo {
   margin-inline: auto;
 }
