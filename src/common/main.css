@@ -1,1 +1,148 @@
 /* 메인 페이지 스타일 */
+
+body {
+  padding: 10px;
+  margin-bottom: 20px;
+
+  h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4375rem;
+    text-shadow:
+      -2px 0 #6a1b9a,
+      0 2px #ea00d9,
+      2px 0 #ea00d9,
+      0 -2px #ea00d9;
+    padding-block: 0.9375rem;
+    white-space: nowrap;
+    text-align: center;
+    border: 5px dotted black;
+    background: linear-gradient(
+      286deg,
+      rgba(236, 125, 206, 0.77) 3%,
+      rgba(232, 145, 30, 1) 7%,
+      rgba(238, 127, 206, 1) 11%,
+      rgba(232, 145, 30, 1) 17%,
+      rgba(232, 145, 30, 1) 21%,
+      rgba(241, 130, 206, 1) 26%,
+      rgba(242, 131, 207, 1) 33%,
+      rgba(232, 145, 30, 1) 49%,
+      rgba(232, 145, 30, 0.87) 60%,
+      rgba(242, 131, 207, 1) 68%,
+      rgba(232, 145, 30, 1) 73%,
+      rgba(242, 131, 207, 1) 81%,
+      rgba(242, 131, 207, 1) 82%,
+      rgba(232, 145, 30, 1) 87%,
+      rgba(232, 145, 30, 1) 88%,
+      rgba(242, 131, 207, 1) 90%,
+      rgba(242, 131, 207, 1) 91%
+    );
+
+    .h1-title {
+      color: burlywood;
+    }
+    .shake {
+      display: inline-block;
+      animation: shake 0.2s 10 alternate ease-in-out both;
+      transform-origin: 0 0;
+    }
+    @keyframes shake {
+      0% {
+        transform: translateX(-5px);
+      }
+      100% {
+        transform: translateX(5px);
+      }
+    }
+
+    @media (width<=974px) {
+      font-size: 0.9375rem;
+      text-align: center;
+      overflow: auto;
+      white-space: wrap;
+    }
+  }
+
+  h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    color: palevioletred;
+    padding-block: 0.625rem;
+    margin-top: 1.25rem;
+  }
+
+  ul {
+    width: 50%;
+    margin-inline: auto;
+  }
+
+  li {
+    line-height: 1;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    padding-block: 0.625rem;
+    font-size: 15px;
+    font-family: monospace;
+
+    a {
+      display: inline-block;
+
+      &:hover {
+        box-shadow: 0 0 5px 8px rgba(55, 248, 229, 0.556);
+      }
+
+      &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 5px 8px rgba(55, 248, 229, 0.556);
+      }
+    }
+  }
+}
+
+.index-deco {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  height: 400px;
+
+  @media (width>=700px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ui,
+  .html,
+  .css {
+    border-radius: 10px;
+    background-image: url(/src/assets/images/dot.jpeg);
+    background-size: cover;
+    padding-block-end: 20px;
+  }
+}
+
+/* 하트 모양 만들기 */
+h2 {
+  position: relative;
+  width: 6.25rem;
+  height: 6.25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-inline: auto;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
