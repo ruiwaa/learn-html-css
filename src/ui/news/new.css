@@ -112,3 +112,39 @@
     }
   }
 }
+
+/* 고객 감사 영상 */
+
+/* 이전에 반응형 영상 구현하는 방식 */
+/* .ediya-youtube {
+  figure {
+    position: relative;
+    height: 0;
+    padding-top: 56.25%;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+} */
+
+/* 현재의 방식 */
+
+.ediya-youtube {
+  figure {
+    aspect-ratio: 16/9;
+    position: relative;
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
