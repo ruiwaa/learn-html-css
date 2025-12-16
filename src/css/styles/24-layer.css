@@ -1,0 +1,60 @@
+/* 레이어 규칙 */
+
+/* 우선 순위 */
+@layer like, lion;
+
+/* like 레이어 스타일- 우선 순위 1 */
+@layer like {
+  .bootcamp {
+    background: yellow !important;
+    padding: 10px;
+
+    h2 {
+      font-size: 1.125rem;
+    }
+
+    p {
+      padding-block: 10px;
+    }
+
+    a {
+      display: block;
+      background: var(--dark-blue);
+      border-radius: 20px;
+      padding: 10px;
+    }
+  }
+}
+
+/* lion 레이어 스타일- 우선 순위 2 */
+
+@layer lion {
+  .bootcamp {
+    background: plum !important;
+
+    h2 {
+      color: red;
+    }
+  }
+}
+
+/* 이름없는 레이어 -우선 순위 3 */
+@layer {
+  .bootcamp {
+    background: lime;
+
+    p {
+      margin-block: 10px;
+    }
+  }
+}
+
+/* 레이어 규칙을 사용하지 않은 스타일 -우선 순위 4 */
+
+/* .bootcamp {
+  background: silver;
+}
+
+.bootcamp {
+  background: lavender;
+} */
