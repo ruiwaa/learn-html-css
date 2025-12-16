@@ -1,0 +1,81 @@
+/* 컨테이너 커리 */
+
+/* 컴포넌트 */
+.post {
+  background: skyblue;
+  /* 단축 표기법 */
+  container: post/inline-size;
+
+  /* 개별 속성 지정 방법 */
+  /* container-type: inline-size;
+  container-name: post; */
+
+  .bootcamp {
+    border: 1px solid purple;
+    container-type: inline-size;
+  }
+
+  .card {
+    background: yellow;
+    h2 {
+      color: blue;
+      padding: 10px;
+    }
+
+    p {
+      margin-block: 1em;
+      line-height: 1.5;
+      color: red;
+    }
+    .link-wrapper {
+      display: flex;
+      flex-flow: nowrap column;
+      gap: 10px;
+    }
+
+    a {
+      padding: 0.5em 1em;
+      border-radius: 30px;
+
+      &.fill {
+        background: var(--dark-blue);
+        color: #fff;
+      }
+
+      &.outline {
+        border: 1px solid currentColor;
+        color: var(--dark-blue);
+      }
+    }
+  }
+
+  @container post (width>= 500px) {
+    .card {
+      background: lightsalmon;
+      h2 {
+        color: lightgoldenrodyellow;
+      }
+
+      p {
+        color: green;
+      }
+      .link-wrapper {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+/* 레이아웃 */
+.likelion {
+  padding: 10px;
+  box-shadow: 0 0 0 5px green;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-flow: dense;
+  gap: 20px;
+
+  .double {
+    grid-column: span 2;
+  }
+}
