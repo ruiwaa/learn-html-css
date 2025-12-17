@@ -79,3 +79,114 @@
     grid-column: span 2;
   }
 }
+
+/* 미디어 쿼리 연습 */
+/* 컴포넌트 */
+.profile {
+  --spacing: 15px;
+  display: grid;
+  grid-template-rows: 4fr 1fr;
+  justify-items: center;
+
+  background: linear-gradient(to bottom, var(--pink) 30%, white 70%);
+  padding: var(--spacing);
+  margin-block: var(--spacing);
+
+  img {
+    box-shadow: 0 0 0 10px var(--pink);
+    border-radius: 50%;
+    margin-block-start: -70px;
+    margin-block-end: 25px;
+  }
+
+  h4 {
+    font-size: 20px;
+    margin-top: var(--spacing);
+  }
+  span {
+    font-size: 1rem;
+    color: gray;
+    font-weight: 700;
+    padding-block-end: 10px;
+  }
+  .private-info {
+    line-height: 1.5;
+    padding-block-end: var(--spacing);
+    text-align: left;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .button {
+    padding-bottom: 30px;
+    button {
+      border-radius: 8px;
+      margin-block: 10px;
+      inline-size: 80px;
+      block-size: 30px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+
+      &.outline {
+        border: 1px solid gray;
+
+        color: currentColor;
+        background: transparent;
+      }
+
+      &.fill {
+        background: var(--dark-blue);
+        color: #fff;
+        padding-inline: 10px;
+        border: 0;
+      }
+    }
+  }
+}
+
+/* 프로필 레이아웃 */
+.profile-wrapper {
+  container-type: inline-size;
+  container-name: profile;
+}
+
+@container profile (width>= 700px) {
+  .profile-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing);
+
+    .profile {
+      background: linear-gradient(to bottom, orange 30%, white 70%);
+    }
+
+    img {
+      margin-top: 30px;
+      box-shadow: 0 0 0 5px orange;
+    }
+
+    .button {
+      display: flex;
+      display: flex;
+      flex-flow: nowrap row;
+      gap: 10px;
+    }
+  }
+}
+
+@container profile (width>= 1000px) {
+  .profile-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    .profile {
+      background: linear-gradient(to bottom, aqua 30%, white 70%);
+    }
+
+    img {
+      box-shadow: 0 0 0 5px aqua;
+      margin-block-start: -60px;
+    }
+  }
+}
