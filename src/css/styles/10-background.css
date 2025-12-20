@@ -34,8 +34,8 @@
     skyblue;
 }
 /* background-image:liner-gradient() */
-.frontend{
+.frontend {
   border: 5px solid blue;
-  background-image: linear-gradient(red,green);
+  background-image: linear-gradient(red, green);
   border-radius: 20px;
 }

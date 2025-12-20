@@ -12,24 +12,22 @@
     top: -20px;
   }
 
-
-  .like{
-      border: 2px solid green;
-    }
- 
+  .like {
+    border: 2px solid green;
   }
+}
 
 /* float:right */
 /* float를 지정한 요소의 부모 요소에 display 명령어를 준다 */
-.container{
+.container {
   border: 5px solid purple;
   display: flow-root;
 
-  img{
+  img {
     border: 1px solid blue;
     float: right;
   }
-  .lion{
+  .lion {
     border: 2px solid red;
   }
 }

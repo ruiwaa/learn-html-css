@@ -1,5 +1,5 @@
 /* 접근성 관련 CSS */
-.sr-only{
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -7,6 +7,6 @@
   white-space: nowrap;
   margin: -1px;
   clip-path: inset(50%);
-  padding:0;
+  padding: 0;
   border: width 0;
 }
