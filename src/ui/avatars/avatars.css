@@ -21,10 +21,6 @@
     height: 100%;
   }
 
-  /* .is-online {
-    background: var(--active-color) !important;
-  } */
-
   .avatar-state {
     width: calc(var(--state-size) / var(--avatar-size) * 100%);
     aspect-ratio: 1/1;
