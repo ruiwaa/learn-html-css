@@ -202,7 +202,16 @@
   grid-template-columns: minmax(280px, 1fr);
   gap: 20px;
 
-  @media (width>=1024px) {
+  @media (width >=1024px) {
+    
+    .ipad-pro,
+    .ipad-air, 
+    .iphone15-pro
+    { 
+      grid-column: span 2;
+    }
     grid-template-columns: repeat(2, minmax(280px, 1fr));
+
+   
   }
 }
